@@ -10,13 +10,80 @@
 function cwrc_permissions_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'Associate XML Forms'.
+  $permissions['Associate XML Forms'] = array(
+    'name' => 'Associate XML Forms',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'xml_form_builder',
+  );
+
+  // Exported permission: 'Create XML Forms'.
+  $permissions['Create XML Forms'] = array(
+    'name' => 'Create XML Forms',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'xml_form_builder',
+  );
+
+  // Exported permission: 'Delete XML Forms'.
+  $permissions['Delete XML Forms'] = array(
+    'name' => 'Delete XML Forms',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'xml_form_builder',
+  );
+
+  // Exported permission: 'Edit XML Forms'.
+  $permissions['Edit XML Forms'] = array(
+    'name' => 'Edit XML Forms',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'xml_form_builder',
+  );
+
   // Exported permission: 'Edit existing OCR stream'.
   $permissions['Edit existing OCR stream'] = array(
     'name' => 'Edit existing OCR stream',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_paged_content',
+  );
+
+  // Exported permission: 'Islandora CWRC BASEX Query'.
+  $permissions['Islandora CWRC BASEX Query'] = array(
+    'name' => 'Islandora CWRC BASEX Query',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'islandora_cwrc_basexdb',
+  );
+
+  // Exported permission: 'List XML Forms'.
+  $permissions['List XML Forms'] = array(
+    'name' => 'List XML Forms',
+    'roles' => array(
+      'DHSI 2014' => 'DHSI 2014',
+      'Documentation' => 'Documentation',
+      'Orlando User' => 'Orlando User',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'xml_form_builder',
+  );
+
+  // Exported permission: 'Manage CSL Citations'.
+  $permissions['Manage CSL Citations'] = array(
+    'name' => 'Manage CSL Citations',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'csl',
   );
 
   // Exported permission: 'access administration menu'.
@@ -24,7 +91,6 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'admin_menu',
   );
@@ -34,7 +100,6 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'system',
   );
@@ -55,12 +120,19 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'views',
   );
 
+  // Exported permission: 'access all webform results'.
+  $permissions['access all webform results'] = array(
+    'name' => 'access all webform results',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'access ckeditor link'.
   $permissions['access ckeditor link'] = array(
     'name' => 'access ckeditor link',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'ckeditor_link',
   );
 
@@ -87,9 +159,43 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['access contextual links'] = array(
     'name' => 'access contextual links',
     'roles' => array(
-      'editor' => 'editor',
+      'administrator' => 'administrator',
     ),
     'module' => 'contextual',
+  );
+
+  // Exported permission: 'access own webform results'.
+  $permissions['access own webform results'] = array(
+    'name' => 'access own webform results',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
+  );
+
+  // Exported permission: 'access own webform submissions'.
+  $permissions['access own webform submissions'] = array(
+    'name' => 'access own webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
+  );
+
+  // Exported permission: 'access private fields'.
+  $permissions['access private fields'] = array(
+    'name' => 'access private fields',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'access rules debug'.
+  $permissions['access rules debug'] = array(
+    'name' => 'access rules debug',
+    'roles' => array(),
+    'module' => 'rules',
   );
 
   // Exported permission: 'access site in maintenance mode'.
@@ -97,7 +203,6 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'access site in maintenance mode',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'system',
   );
@@ -105,10 +210,18 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'access site reports'.
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'system',
+  );
+
+  // Exported permission: 'access user dashboard'.
+  $permissions['access user dashboard'] = array(
+    'name' => 'access user dashboard',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'cwrc_dashboards',
   );
 
   // Exported permission: 'access user profiles'.
@@ -140,6 +253,46 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'islandora_object_lock',
   );
 
+  // Exported permission: 'admin_classes'.
+  $permissions['admin_classes'] = array(
+    'name' => 'admin_classes',
+    'roles' => array(
+      'Orlando User' => 'Orlando User',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'ds_ui',
+  );
+
+  // Exported permission: 'admin_display_suite'.
+  $permissions['admin_display_suite'] = array(
+    'name' => 'admin_display_suite',
+    'roles' => array(
+      'Orlando User' => 'Orlando User',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'ds',
+  );
+
+  // Exported permission: 'admin_fields'.
+  $permissions['admin_fields'] = array(
+    'name' => 'admin_fields',
+    'roles' => array(
+      'Orlando User' => 'Orlando User',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'ds_ui',
+  );
+
+  // Exported permission: 'admin_view_modes'.
+  $permissions['admin_view_modes'] = array(
+    'name' => 'admin_view_modes',
+    'roles' => array(
+      'Orlando User' => 'Orlando User',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'ds_ui',
+  );
+
   // Exported permission: 'administer Islandora BagIt'.
   $permissions['administer Islandora BagIt'] = array(
     'name' => 'administer Islandora BagIt',
@@ -159,54 +312,42 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'administer block classes'.
   $permissions['administer block classes'] = array(
     'name' => 'administer block classes',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'block_class',
   );
 
   // Exported permission: 'administer block semantics'.
   $permissions['administer block semantics'] = array(
     'name' => 'administer block semantics',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'borealis_sb',
   );
 
   // Exported permission: 'administer blockify'.
   $permissions['administer blockify'] = array(
     'name' => 'administer blockify',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'blockify',
   );
 
   // Exported permission: 'administer blocks'.
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'block',
   );
 
   // Exported permission: 'administer ckeditor'.
   $permissions['administer ckeditor'] = array(
     'name' => 'administer ckeditor',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'ckeditor',
   );
 
   // Exported permission: 'administer ckeditor link'.
   $permissions['administer ckeditor link'] = array(
     'name' => 'administer ckeditor link',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'ckeditor_link',
   );
 
@@ -215,6 +356,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'administer compound relationships',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_compound_object',
   );
@@ -226,6 +368,31 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'administer contextual help'.
+  $permissions['administer contextual help'] = array(
+    'name' => 'administer contextual help',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'de_contextual_help',
+  );
+
+  // Exported permission: 'administer encrypt'.
+  $permissions['administer encrypt'] = array(
+    'name' => 'administer encrypt',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'encrypt',
+  );
+
+  // Exported permission: 'administer entity translation'.
+  $permissions['administer entity translation'] = array(
+    'name' => 'administer entity translation',
+    'roles' => array(),
+    'module' => 'entity_translation',
+  );
+
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -233,12 +400,28 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: 'administer field collections'.
+  $permissions['administer field collections'] = array(
+    'name' => 'administer field collections',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_collection',
+  );
+
+  // Exported permission: 'administer field permissions'.
+  $permissions['administer field permissions'] = array(
+    'name' => 'administer field permissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'administer fieldgroups'.
   $permissions['administer fieldgroups'] = array(
     'name' => 'administer fieldgroups',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'field_group',
   );
 
@@ -254,7 +437,6 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'administer files',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -275,6 +457,24 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'flag',
   );
 
+  // Exported permission: 'administer google tag manager'.
+  $permissions['administer google tag manager'] = array(
+    'name' => 'administer google tag manager',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'google_tag',
+  );
+
+  // Exported permission: 'administer group'.
+  $permissions['administer group'] = array(
+    'name' => 'administer group',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'og',
+  );
+
   // Exported permission: 'administer image styles'.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
@@ -285,9 +485,7 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'administer imce'.
   $permissions['administer imce'] = array(
     'name' => 'administer imce',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'imce',
   );
 
@@ -364,12 +562,20 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'islandora_xquery',
   );
 
+  // Exported permission: 'administer languages'.
+  $permissions['administer languages'] = array(
+    'name' => 'administer languages',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'locale',
+  );
+
   // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'menu',
   );
@@ -377,16 +583,16 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'administer meta tags'.
   $permissions['administer meta tags'] = array(
     'name' => 'administer meta tags',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'administer modernizr'.
   $permissions['administer modernizr'] = array(
     'name' => 'administer modernizr',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'modernizr',
   );
 
@@ -404,6 +610,13 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'administer nodequeue'.
+  $permissions['administer nodequeue'] = array(
+    'name' => 'administer nodequeue',
+    'roles' => array(),
+    'module' => 'nodequeue',
+  );
+
   // Exported permission: 'administer nodes'.
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
@@ -411,6 +624,15 @@ function cwrc_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'administer openid provider'.
+  $permissions['administer openid provider'] = array(
+    'name' => 'administer openid provider',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'openid_provider',
   );
 
   // Exported permission: 'administer pathauto'.
@@ -423,23 +645,68 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'administer permissions'.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'administer privatemsg settings'.
+  $permissions['administer privatemsg settings'] = array(
+    'name' => 'administer privatemsg settings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'privatemsg',
+  );
+
+  // Exported permission: 'administer quicktabs'.
+  $permissions['administer quicktabs'] = array(
+    'name' => 'administer quicktabs',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'quicktabs',
+  );
+
+  // Exported permission: 'administer realname'.
+  $permissions['administer realname'] = array(
+    'name' => 'administer realname',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'realname',
+  );
+
+  // Exported permission: 'administer rules'.
+  $permissions['administer rules'] = array(
+    'name' => 'administer rules',
+    'roles' => array(),
+    'module' => 'rules',
+  );
+
+  // Exported permission: 'administer saved islandora searches'.
+  $permissions['administer saved islandora searches'] = array(
+    'name' => 'administer saved islandora searches',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'islandora_saved_searches',
   );
 
   // Exported permission: 'administer search'.
   $permissions['administer search'] = array(
     'name' => 'administer search',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'search',
   );
 
   // Exported permission: 'administer site configuration'.
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'system',
   );
 
@@ -467,17 +734,26 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'administer url aliases'.
   $permissions['administer url aliases'] = array(
     'name' => 'administer url aliases',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'path',
   );
 
   // Exported permission: 'administer users'.
   $permissions['administer users'] = array(
     'name' => 'administer users',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'administer uuid'.
+  $permissions['administer uuid'] = array(
+    'name' => 'administer uuid',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'uuid',
   );
 
   // Exported permission: 'administer views'.
@@ -497,21 +773,38 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'islandora_xacml_editor',
   );
 
+  // Exported permission: 'allow disabling privatemsg'.
+  $permissions['allow disabling privatemsg'] = array(
+    'name' => 'allow disabling privatemsg',
+    'roles' => array(
+      'DHSI 2014' => 'DHSI 2014',
+      'Documentation' => 'Documentation',
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'privatemsg',
+  );
+
+  // Exported permission: 'annotate CWRC datastreams'.
+  $permissions['annotate CWRC datastreams'] = array(
+    'name' => 'annotate CWRC datastreams',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'islandora_cwrc_document',
+  );
+
   // Exported permission: 'block IP addresses'.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'system',
   );
 
   // Exported permission: 'bypass file access'.
   $permissions['bypass file access'] = array(
     'name' => 'bypass file access',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'file_entity',
   );
 
@@ -522,6 +815,22 @@ function cwrc_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'bypass recipient message limit'.
+  $permissions['bypass recipient message limit'] = array(
+    'name' => 'bypass recipient message limit',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'privatemsg_limits',
+  );
+
+  // Exported permission: 'bypass rules access'.
+  $permissions['bypass rules access'] = array(
+    'name' => 'bypass rules access',
+    'roles' => array(),
+    'module' => 'rules',
   );
 
   // Exported permission: 'cancel account'.
@@ -538,11 +847,20 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'configure openid connect clients'.
+  $permissions['configure openid connect clients'] = array(
+    'name' => 'configure openid connect clients',
+    'roles' => array(),
+    'module' => 'openid_connect',
+  );
+
   // Exported permission: 'create Islandora Bags'.
   $permissions['create Islandora Bags'] = array(
     'name' => 'create Islandora Bags',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_bagit',
   );
@@ -587,8 +905,19 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'create datastreams',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_rest',
+  );
+
+  // Exported permission: 'create entity'.
+  $permissions['create entity'] = array(
+    'name' => 'create entity',
+    'roles' => array(
+      'Orlando User' => 'Orlando User',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'cwrc_entities',
   );
 
   // Exported permission: 'create event content'.
@@ -598,12 +927,29 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create field_research_space'.
+  $permissions['create field_research_space'] = array(
+    'name' => 'create field_research_space',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'create field_top_level_collection'.
+  $permissions['create field_top_level_collection'] = array(
+    'name' => 'create field_top_level_collection',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'create files'.
   $permissions['create files'] = array(
     'name' => 'create files',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -613,6 +959,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'create image annotations',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_image_annotation',
   );
@@ -622,8 +969,19 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'create objects',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_rest',
+  );
+
+  // Exported permission: 'create open annotations'.
+  $permissions['create open annotations'] = array(
+    'name' => 'create open annotations',
+    'roles' => array(
+      'Orlando User' => 'Orlando User',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'cwrc_entities',
   );
 
   // Exported permission: 'create page content'.
@@ -631,6 +989,17 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'create page content',
     'roles' => array(),
     'module' => 'node',
+  );
+
+  // Exported permission: 'create private message tags'.
+  $permissions['create private message tags'] = array(
+    'name' => 'create private message tags',
+    'roles' => array(
+      'DHSI 2014' => 'DHSI 2014',
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'privatemsg_filter',
   );
 
   // Exported permission: 'create project content'.
@@ -645,8 +1014,16 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'create relationships',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_rest',
+  );
+
+  // Exported permission: 'create slider_content content'.
+  $permissions['create slider_content content'] = array(
+    'name' => 'create slider_content content',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: 'create url aliases'.
@@ -654,7 +1031,6 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'path',
   );
@@ -669,10 +1045,17 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'customize ckeditor'.
   $permissions['customize ckeditor'] = array(
     'name' => 'customize ckeditor',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'ckeditor',
+  );
+
+  // Exported permission: 'delete all webform submissions'.
+  $permissions['delete all webform submissions'] = array(
+    'name' => 'delete all webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
   );
 
   // Exported permission: 'delete any article content'.
@@ -726,6 +1109,13 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'delete any project content'.
   $permissions['delete any project content'] = array(
     'name' => 'delete any project content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any slider_content content'.
+  $permissions['delete any slider_content content'] = array(
+    'name' => 'delete any slider_content content',
     'roles' => array(),
     'module' => 'node',
   );
@@ -840,6 +1230,13 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete own slider_content content'.
+  $permissions['delete own slider_content content'] = array(
+    'name' => 'delete own slider_content content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete own video files'.
   $permissions['delete own video files'] = array(
     'name' => 'delete own video files',
@@ -852,6 +1249,27 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'delete own webform content',
     'roles' => array(),
     'module' => 'node',
+  );
+
+  // Exported permission: 'delete own webform submissions'.
+  $permissions['delete own webform submissions'] = array(
+    'name' => 'delete own webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
+  );
+
+  // Exported permission: 'delete privatemsg'.
+  $permissions['delete privatemsg'] = array(
+    'name' => 'delete privatemsg',
+    'roles' => array(
+      'DHSI 2014' => 'DHSI 2014',
+      'Documentation' => 'Documentation',
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'privatemsg',
   );
 
   // Exported permission: 'delete relationships'.
@@ -868,6 +1286,15 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(),
     'module' => 'node',
+  );
+
+  // Exported permission: 'delete terms in tags'.
+  $permissions['delete terms in tags'] = array(
+    'name' => 'delete terms in tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'display drupal links'.
@@ -946,6 +1373,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'edit CWRC',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_critical_edition',
   );
@@ -955,8 +1383,18 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'edit CWRC datastreams',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_cwrc_document',
+  );
+
+  // Exported permission: 'edit all webform submissions'.
+  $permissions['edit all webform submissions'] = array(
+    'name' => 'edit all webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
   );
 
   // Exported permission: 'edit any article content'.
@@ -1014,6 +1452,13 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any slider_content content'.
+  $permissions['edit any slider_content content'] = array(
+    'name' => 'edit any slider_content content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any video files'.
   $permissions['edit any video files'] = array(
     'name' => 'edit any video files',
@@ -1040,12 +1485,29 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'islandora',
   );
 
+  // Exported permission: 'edit field_research_space'.
+  $permissions['edit field_research_space'] = array(
+    'name' => 'edit field_research_space',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit field_top_level_collection'.
+  $permissions['edit field_top_level_collection'] = array(
+    'name' => 'edit field_top_level_collection',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'edit meta tags'.
   $permissions['edit meta tags'] = array(
     'name' => 'edit meta tags',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'metatag',
   );
@@ -1078,6 +1540,24 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own field_research_space'.
+  $permissions['edit own field_research_space'] = array(
+    'name' => 'edit own field_research_space',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit own field_top_level_collection'.
+  $permissions['edit own field_top_level_collection'] = array(
+    'name' => 'edit own field_top_level_collection',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'edit own image files'.
   $permissions['edit own image files'] = array(
     'name' => 'edit own image files',
@@ -1101,6 +1581,13 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own slider_content content'.
+  $permissions['edit own slider_content content'] = array(
+    'name' => 'edit own slider_content content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit own video files'.
   $permissions['edit own video files'] = array(
     'name' => 'edit own video files',
@@ -1115,6 +1602,15 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own webform submissions'.
+  $permissions['edit own webform submissions'] = array(
+    'name' => 'edit own webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'edit scholar metadata'.
   $permissions['edit scholar metadata'] = array(
     'name' => 'edit scholar metadata',
@@ -1124,13 +1620,29 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'islandora_entities',
   );
 
+  // Exported permission: 'edit terms in tags'.
+  $permissions['edit terms in tags'] = array(
+    'name' => 'edit terms in tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit views basic settings'.
   $permissions['edit views basic settings'] = array(
     'name' => 'edit views basic settings',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'views_ui_basic',
+  );
+
+  // Exported permission: 'edit webform components'.
+  $permissions['edit webform components'] = array(
+    'name' => 'edit webform components',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
   );
 
   // Exported permission: 'export islandora bookmarks'.
@@ -1141,6 +1653,16 @@ function cwrc_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_bookmark',
+  );
+
+  // Exported permission: 'filter private messages'.
+  $permissions['filter private messages'] = array(
+    'name' => 'filter private messages',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'privatemsg_filter',
   );
 
   // Exported permission: 'flag favourite_projects'.
@@ -1155,9 +1677,7 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'flush caches'.
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'admin_menu',
   );
 
@@ -1166,6 +1686,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'generate datastream token',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_rest',
   );
@@ -1200,6 +1721,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'list relationships',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_rest',
   );
@@ -1209,6 +1731,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'manage collection policy',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_basic_collection',
   );
@@ -1266,11 +1789,50 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'islandora',
   );
 
+  // Exported permission: 'manage own openid sites'.
+  $permissions['manage own openid sites'] = array(
+    'name' => 'manage own openid sites',
+    'roles' => array(
+      'DHSI 2014' => 'DHSI 2014',
+      'Documentation' => 'Documentation',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'openid_provider',
+  );
+
+  // Exported permission: 'manage own openid_connect accounts'.
+  $permissions['manage own openid_connect accounts'] = array(
+    'name' => 'manage own openid_connect accounts',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'openid_connect',
+  );
+
+  // Exported permission: 'manipulate all queues'.
+  $permissions['manipulate all queues'] = array(
+    'name' => 'manipulate all queues',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'nodequeue',
+  );
+
+  // Exported permission: 'manipulate queues'.
+  $permissions['manipulate queues'] = array(
+    'name' => 'manipulate queues',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'nodequeue',
+  );
+
   // Exported permission: 'migrate collection members'.
   $permissions['migrate collection members'] = array(
     'name' => 'migrate collection members',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_basic_collection',
   );
@@ -1289,6 +1851,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'modify datastreams',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_rest',
   );
@@ -1298,6 +1861,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'modify object properties',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_rest',
   );
@@ -1307,6 +1871,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'modify workflow datastreams',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_workflow_rest',
   );
@@ -1314,10 +1879,15 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'notify of path changes'.
   $permissions['notify of path changes'] = array(
     'name' => 'notify of path changes',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'pathauto',
+  );
+
+  // Exported permission: 'openid_connect set own password'.
+  $permissions['openid_connect set own password'] = array(
+    'name' => 'openid_connect set own password',
+    'roles' => array(),
+    'module' => 'openid_connect',
   );
 
   // Exported permission: 'publish button publish any content types'.
@@ -1325,7 +1895,6 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'publish button publish any content types',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'publish_button',
   );
@@ -1335,9 +1904,17 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'publish button unpublish any content types',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'publish_button',
+  );
+
+  // Exported permission: 'read all private messages'.
+  $permissions['read all private messages'] = array(
+    'name' => 'read all private messages',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'privatemsg',
   );
 
   // Exported permission: 'read critical editions'.
@@ -1347,6 +1924,18 @@ function cwrc_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'islandora_critical_edition_advanced',
+  );
+
+  // Exported permission: 'read privatemsg'.
+  $permissions['read privatemsg'] = array(
+    'name' => 'read privatemsg',
+    'roles' => array(
+      'DHSI 2014' => 'DHSI 2014',
+      'Documentation' => 'Documentation',
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'privatemsg',
   );
 
   // Exported permission: 'regenerate derivatives for an object'.
@@ -1376,6 +1965,13 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'islandora',
   );
 
+  // Exported permission: 'reply only privatemsg'.
+  $permissions['reply only privatemsg'] = array(
+    'name' => 'reply only privatemsg',
+    'roles' => array(),
+    'module' => 'privatemsg',
+  );
+
   // Exported permission: 'revert revisions'.
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
@@ -1393,11 +1989,22 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'islandora',
   );
 
+  // Exported permission: 'save islandora searches'.
+  $permissions['save islandora searches'] = array(
+    'name' => 'save islandora searches',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'islandora_saved_searches',
+  );
+
   // Exported permission: 'search and replace with xquery'.
   $permissions['search and replace with xquery'] = array(
     'name' => 'search and replace with xquery',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_xquery',
   );
@@ -1408,7 +2015,6 @@ function cwrc_permissions_user_default_permissions() {
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
     ),
     'module' => 'search',
   );
@@ -1431,6 +2037,18 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'select text format for privatemsg'.
+  $permissions['select text format for privatemsg'] = array(
+    'name' => 'select text format for privatemsg',
+    'roles' => array(
+      'DHSI 2014' => 'DHSI 2014',
+      'Documentation' => 'Documentation',
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'privatemsg',
+  );
+
   // Exported permission: 'share islandora bookmarks'.
   $permissions['share islandora bookmarks'] = array(
     'name' => 'share islandora bookmarks',
@@ -1439,6 +2057,69 @@ function cwrc_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_bookmark',
+  );
+
+  // Exported permission: 'tag private messages'.
+  $permissions['tag private messages'] = array(
+    'name' => 'tag private messages',
+    'roles' => array(
+      'DHSI 2014' => 'DHSI 2014',
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'privatemsg_filter',
+  );
+
+  // Exported permission: 'toggle field translatability'.
+  $permissions['toggle field translatability'] = array(
+    'name' => 'toggle field translatability',
+    'roles' => array(),
+    'module' => 'entity_translation',
+  );
+
+  // Exported permission: 'translate admin strings'.
+  $permissions['translate admin strings'] = array(
+    'name' => 'translate admin strings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'i18n_string',
+  );
+
+  // Exported permission: 'translate any entity'.
+  $permissions['translate any entity'] = array(
+    'name' => 'translate any entity',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'entity_translation',
+  );
+
+  // Exported permission: 'translate interface'.
+  $permissions['translate interface'] = array(
+    'name' => 'translate interface',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'locale',
+  );
+
+  // Exported permission: 'translate node entities'.
+  $permissions['translate node entities'] = array(
+    'name' => 'translate node entities',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'entity_translation',
+  );
+
+  // Exported permission: 'translate user-defined strings'.
+  $permissions['translate user-defined strings'] = array(
+    'name' => 'translate user-defined strings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'i18n_string',
   );
 
   // Exported permission: 'unflag favourite_projects'.
@@ -1455,6 +2136,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'use CWRC',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_critical_edition',
   );
@@ -1462,10 +2144,7 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'use advanced search'.
   $permissions['use advanced search'] = array(
     'name' => 'use advanced search',
-    'roles' => array(
-      'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'search',
   );
 
@@ -1495,14 +2174,46 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'islandora_bookmark',
   );
 
+  // Exported permission: 'use text format filtered_html'.
+  $permissions['use text format filtered_html'] = array(
+    'name' => 'use text format filtered_html',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'filter',
+  );
+
   // Exported permission: 'use text format full_html'.
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'use tokens in privatemsg'.
+  $permissions['use tokens in privatemsg'] = array(
+    'name' => 'use tokens in privatemsg',
+    'roles' => array(
+      'DHSI 2014' => 'DHSI 2014',
+      'Documentation' => 'Documentation',
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'privatemsg',
+  );
+
+  // Exported permission: 'view CWRC datastreams'.
+  $permissions['view CWRC datastreams'] = array(
+    'name' => 'view CWRC datastreams',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'islandora_cwrc_document',
   );
 
   // Exported permission: 'view critical edition'.
@@ -1510,6 +2221,8 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'view critical edition',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_critical_edition',
   );
@@ -1519,8 +2232,20 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'view datastreams',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_rest',
+  );
+
+  // Exported permission: 'view entity'.
+  $permissions['view entity'] = array(
+    'name' => 'view entity',
+    'roles' => array(
+      'Orlando User' => 'Orlando User',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'cwrc_entities',
   );
 
   // Exported permission: 'view fedora repository objects'.
@@ -1532,6 +2257,24 @@ function cwrc_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora',
+  );
+
+  // Exported permission: 'view field_research_space'.
+  $permissions['view field_research_space'] = array(
+    'name' => 'view field_research_space',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view field_top_level_collection'.
+  $permissions['view field_top_level_collection'] = array(
+    'name' => 'view field_top_level_collection',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
   );
 
   // Exported permission: 'view files'.
@@ -1549,6 +2292,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'view image annotations',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_image_annotation',
   );
@@ -1558,6 +2302,8 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'view objects',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_rest',
   );
@@ -1570,6 +2316,34 @@ function cwrc_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora',
+  );
+
+  // Exported permission: 'view open annotations'.
+  $permissions['view open annotations'] = array(
+    'name' => 'view open annotations',
+    'roles' => array(
+      'Orlando User' => 'Orlando User',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'cwrc_entities',
+  );
+
+  // Exported permission: 'view own field_research_space'.
+  $permissions['view own field_research_space'] = array(
+    'name' => 'view own field_research_space',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view own field_top_level_collection'.
+  $permissions['view own field_top_level_collection'] = array(
+    'name' => 'view own field_top_level_collection',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
   );
 
   // Exported permission: 'view own files'.
@@ -1586,7 +2360,6 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'view own private files',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -1602,7 +2375,7 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['view private files'] = array(
     'name' => 'view private files',
     'roles' => array(
-      'editor' => 'editor',
+      'administrator' => 'administrator',
     ),
     'module' => 'file_entity',
   );
@@ -1614,11 +2387,21 @@ function cwrc_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'view roles recipients'.
+  $permissions['view roles recipients'] = array(
+    'name' => 'view roles recipients',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'privatemsg_roles',
+  );
+
   // Exported permission: 'view saved reports'.
   $permissions['view saved reports'] = array(
     'name' => 'view saved reports',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_workflow_rest',
   );
@@ -1628,6 +2411,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'view technical metadata',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_fits',
   );
@@ -1637,9 +2421,29 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'view the administration theme',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'write privatemsg'.
+  $permissions['write privatemsg'] = array(
+    'name' => 'write privatemsg',
+    'roles' => array(
+      'DHSI 2014' => 'DHSI 2014',
+      'Documentation' => 'Documentation',
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'privatemsg',
+  );
+
+  // Exported permission: 'write privatemsg to roles'.
+  $permissions['write privatemsg to roles'] = array(
+    'name' => 'write privatemsg to roles',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'privatemsg_roles',
   );
 
   return $permissions;
