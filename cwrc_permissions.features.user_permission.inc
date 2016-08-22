@@ -1677,7 +1677,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'flush caches'.
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'admin_menu',
   );
 
