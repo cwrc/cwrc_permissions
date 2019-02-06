@@ -61,6 +61,8 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'Islandora CWRC BASEX Query',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_cwrc_basexdb',
   );
@@ -69,7 +71,6 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['List XML Forms'] = array(
     'name' => 'List XML Forms',
     'roles' => array(
-      'DHSI 2014' => 'DHSI 2014',
       'Documentation' => 'Documentation',
       'Orlando User' => 'Orlando User',
       'administrator' => 'administrator',
@@ -210,7 +211,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'access site reports'.
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'system',
   );
 
@@ -333,7 +336,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'administer blocks'.
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'block',
   );
 
@@ -777,7 +782,6 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['allow disabling privatemsg'] = array(
     'name' => 'allow disabling privatemsg',
     'roles' => array(
-      'DHSI 2014' => 'DHSI 2014',
       'Documentation' => 'Documentation',
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
@@ -789,6 +793,10 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['annotate CWRC datastreams'] = array(
     'name' => 'annotate CWRC datastreams',
     'roles' => array(
+      'CWRCShop participant' => 'CWRCShop participant',
+      'Documentation' => 'Documentation',
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_cwrc_document',
@@ -995,7 +1003,6 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['create private message tags'] = array(
     'name' => 'create private message tags',
     'roles' => array(
-      'DHSI 2014' => 'DHSI 2014',
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
@@ -1264,7 +1271,6 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['delete privatemsg'] = array(
     'name' => 'delete privatemsg',
     'roles' => array(
-      'DHSI 2014' => 'DHSI 2014',
       'Documentation' => 'Documentation',
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
@@ -1795,7 +1801,6 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['manage own openid sites'] = array(
     'name' => 'manage own openid sites',
     'roles' => array(
-      'DHSI 2014' => 'DHSI 2014',
       'Documentation' => 'Documentation',
       'administrator' => 'administrator',
     ),
@@ -1932,7 +1937,6 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['read privatemsg'] = array(
     'name' => 'read privatemsg',
     'roles' => array(
-      'DHSI 2014' => 'DHSI 2014',
       'Documentation' => 'Documentation',
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
@@ -2043,7 +2047,6 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['select text format for privatemsg'] = array(
     'name' => 'select text format for privatemsg',
     'roles' => array(
-      'DHSI 2014' => 'DHSI 2014',
       'Documentation' => 'Documentation',
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
@@ -2065,7 +2068,6 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['tag private messages'] = array(
     'name' => 'tag private messages',
     'roles' => array(
-      'DHSI 2014' => 'DHSI 2014',
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
@@ -2138,6 +2140,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'use CWRC',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'islandora_critical_edition',
@@ -2192,6 +2195,7 @@ function cwrc_permissions_user_default_permissions() {
     'name' => 'use text format full_html',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
   );
@@ -2200,7 +2204,6 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['use tokens in privatemsg'] = array(
     'name' => 'use tokens in privatemsg',
     'roles' => array(
-      'DHSI 2014' => 'DHSI 2014',
       'Documentation' => 'Documentation',
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
@@ -2212,6 +2215,9 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['view CWRC datastreams'] = array(
     'name' => 'view CWRC datastreams',
     'roles' => array(
+      'CWRCShop participant' => 'CWRCShop participant',
+      'Documentation' => 'Documentation',
+      'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
@@ -2431,7 +2437,6 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['write privatemsg'] = array(
     'name' => 'write privatemsg',
     'roles' => array(
-      'DHSI 2014' => 'DHSI 2014',
       'Documentation' => 'Documentation',
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
