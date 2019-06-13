@@ -91,6 +91,7 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
     'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
       'administrator' => 'administrator',
     ),
     'module' => 'admin_menu',
@@ -100,6 +101,7 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
       'administrator' => 'administrator',
     ),
     'module' => 'system',
@@ -141,6 +143,7 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
@@ -151,6 +154,7 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -160,6 +164,7 @@ function cwrc_permissions_user_default_permissions() {
   $permissions['access contextual links'] = array(
     'name' => 'access contextual links',
     'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
       'administrator' => 'administrator',
     ),
     'module' => 'contextual',
@@ -876,7 +881,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'create article content'.
   $permissions['create article content'] = array(
     'name' => 'create article content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -931,7 +938,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'create event content'.
   $permissions['create event content'] = array(
     'name' => 'create event content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -995,7 +1004,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'create page content'.
   $permissions['create page content'] = array(
     'name' => 'create page content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1029,7 +1040,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'create slider_content content'.
   $permissions['create slider_content content'] = array(
     'name' => 'create slider_content content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1191,7 +1204,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'delete own article content'.
   $permissions['delete own article content'] = array(
     'name' => 'delete own article content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1212,7 +1227,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'delete own event content'.
   $permissions['delete own event content'] = array(
     'name' => 'delete own event content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1226,7 +1243,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'delete own page content'.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1240,7 +1259,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'delete own slider_content content'.
   $permissions['delete own slider_content content'] = array(
     'name' => 'delete own slider_content content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1406,7 +1427,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'edit any article content'.
   $permissions['edit any article content'] = array(
     'name' => 'edit any article content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1431,7 +1454,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'edit any event content'.
   $permissions['edit any event content'] = array(
     'name' => 'edit any event content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1447,7 +1472,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'edit any page content'.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1461,7 +1488,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'edit any slider_content content'.
   $permissions['edit any slider_content content'] = array(
     'name' => 'edit any slider_content content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1521,7 +1550,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'edit own article content'.
   $permissions['edit own article content'] = array(
     'name' => 'edit own article content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1542,7 +1573,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'edit own event content'.
   $permissions['edit own event content'] = array(
     'name' => 'edit own event content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1574,7 +1607,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'edit own page content'.
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -1590,7 +1625,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'edit own slider_content content'.
   $permissions['edit own slider_content content'] = array(
     'name' => 'edit own slider_content content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -2375,7 +2412,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'view own unpublished content'.
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 
@@ -2391,7 +2430,9 @@ function cwrc_permissions_user_default_permissions() {
   // Exported permission: 'view revisions'.
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
-    'roles' => array(),
+    'roles' => array(
+      'Site contributor (non-administrative)' => 'Site contributor (non-administrative)',
+    ),
     'module' => 'node',
   );
 

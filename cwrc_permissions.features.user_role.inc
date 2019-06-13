@@ -22,6 +22,12 @@ function cwrc_permissions_user_default_roles() {
     'weight' => 7,
   );
 
+  // Exported role: Site contributor (non-administrative).
+  $roles['Site contributor (non-administrative)'] = array(
+    'name' => 'Site contributor (non-administrative)',
+    'weight' => 164,
+  );
+
   // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',

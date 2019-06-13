@@ -369,4 +369,5 @@ features[user_permission][] = write privatemsg
 features[user_permission][] = write privatemsg to roles
 features[user_role][] = Documentation
 features[user_role][] = Orlando User
+features[user_role][] = Site contributor (non-administrative)
 features[user_role][] = administrator
